@@ -2,9 +2,96 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional responsivo">
+  <title>Portafolio | Adiel Esteban Gutierrez</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Mi portafolio</h1>
+
+  <header>
+    <a href="#inicio" class="logo">Adiel Gutierrez</a>
+    <button id="btn-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h1>Hola, soy Adiel Gutierrez</h1>
+        <p>ingeniero de software en formación profesional, me destaco por mi dedicación, trabajo en equipo, puntualidad y entrega para terminar proyectos. En este momento de mi vida cuento con altas expectativas de aprendizaje, aportando mi entusiasmo y energía, a la vez que estoy abierto a nuevos aprendizajes</p>
+        <a href="#proyectos" class="boton">Ver mis proyectos</a>
+      </div>
+      <img src="img/perfil.jpg" alt="Foto de perfil de Adiel Gutierrez">
+    </section>
+
+    <section id="sobre-mi" class="seccion">
+      <h2>Sobre mí</h2>
+      <p>Soy estudiante de desarrollo de software. Estoy aprendiendo a crear páginas web y aplicaciones móviles, y me interesa construir interfaces claras que funcionen bien en cualquier dispositivo.</p>
+      <ul class="habilidades">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Git y GitHub</li>
+      </ul>
+    </section>
+
+    <section id="proyectos" class="seccion">
+      <h2>Proyectos</h2>
+      <div class="rejilla">
+        <article class="tarjeta">
+          <img src="img/proyecto1.jpg" alt="Código de una página web en pantalla">
+          <h3>Mi primera página web</h3>
+          <p>Página básica creada para configurar mi entorno de desarrollo web.</p>
+          <button class="btn-detalle" aria-expanded="false">Ver más</button>
+          <p class="detalle">Hecha con HTML5, CSS y JavaScript en Visual Studio Code. Aprendí a organizar un proyecto en carpetas (css, js, img) y a probarlo en el navegador.</p>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/proyecto2.jpg" alt="Aplicación móvil en un teléfono">
+          <h3>App "Hola Mundo"</h3>
+          <p>Mi primera aplicación móvil, creada en Android Studio.</p>
+          <button class="btn-detalle" aria-expanded="false">Ver más</button>
+          <p class="detalle">Instalé el entorno de desarrollo, creé el proyecto y lo ejecuté en un emulador. Fue mi primer acercamiento a la computación móvil.</p>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/proyecto3.jpg" alt="Diseño de una página web en varios dispositivos">
+          <h3>Portafolio responsivo</h3>
+          <p>Esta misma página, adaptable a computador, tableta y móvil.</p>
+          <button class="btn-detalle" aria-expanded="false">Ver más</button>
+          <p class="detalle">Usa HTML5 semántico, Flexbox, CSS Grid y Media Queries con enfoque Mobile First. Incluye menú adaptable, tarjetas desplegables y formulario validado.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <form id="formulario" novalidate>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit" class="boton">Enviar</button>
+        <p id="respuesta" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Adiel Esteban Gutierrez. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
